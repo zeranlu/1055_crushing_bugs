@@ -13,6 +13,12 @@ let theThumbnails = document.querySelectorAll('#buttonHolder img'),
     topRightPuzzlePiece = document.querySelector('#topRight');
     bottomLeftPuzzlePiece = document.querySelector('#bottomLeft');
     bottomRightPuzzlePiece = document.querySelector('#bottomRight');
+
+    topLeftPuzzlePiece = document.querySelector('#topLeft');
+    topRightPuzzlePiece = document.querySelector('#topRight');
+    bottomLeftPuzzlePiece = document.querySelector('#bottomLeft');
+    bottomRightPuzzlePiece = document.querySelector('#bottomRight');
+
     
 // functions
 function changeImageSet() {
@@ -22,6 +28,12 @@ function changeImageSet() {
     topRightPuzzlePiece.setAttribute("src", `images/topRight${this.dataset.bgref}.jpg`);
     bottomLeftPuzzlePiece.setAttribute("src", `images/bottomLeft${this.dataset.bgref}.jpg`);
     bottomRightPuzzlePiece.setAttribute("src", `images/bottomRight${this.dataset.bgref}.jpg`);
+
+    topLeftPuzzlePiece.setAttribute("src", `images/topLeft${this.dataset.bgref}.jpg`);
+    topRightPuzzlePiece.setAttribute("src", `images/topRight${this.dataset.bgref}.jpg`);
+    bottomLeftPuzzlePiece.setAttribute("src", `images/bottomLeft${this.dataset.bgref}.jpg`);
+    bottomRightPuzzlePiece.setAttribute("src", `images/bottomRight${this.dataset.bgref}.jpg`);
+
 
     pzlPieces.forEach(piece => originalBox.appendChild(piece));
 
