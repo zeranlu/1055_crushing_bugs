@@ -2,6 +2,9 @@
 let theThumbnails = document.querySelectorAll('#buttonHolder img'),
     gameBoard = document.querySelector('.puzzle-board'),
     originalBox = document.querySelector('.puzzle-pieces')
+
+    originalBox = document.querySelector('.puzzle-pieces')
+
     pzlPieces = document.querySelectorAll('.puzzle-pieces img'),
     dropZone = document.querySelectorAll('.drop-zone'),
     resetPieces = document.querySelector('.reset-pieces');
@@ -19,6 +22,8 @@ function changeImageSet() {
     topRightPuzzlePiece.setAttribute("src", `images/topRight${this.dataset.bgref}.jpg`);
     bottomLeftPuzzlePiece.setAttribute("src", `images/bottomLeft${this.dataset.bgref}.jpg`);
     bottomRightPuzzlePiece.setAttribute("src", `images/bottomRight${this.dataset.bgref}.jpg`);
+
+    pzlPieces.forEach(piece => originalBox.appendChild(piece));
 
     pzlPieces.forEach(piece => originalBox.appendChild(piece));
 }
