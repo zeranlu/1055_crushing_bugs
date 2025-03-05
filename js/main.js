@@ -54,6 +54,24 @@ function allowDrop(event) {
     dropZone.appendChild(droppedEl);
 }
 
+function allowDrop(event) {
+    event.preventDefault();
+
+    let dropZone = this;
+
+    if (dropZone.children.length > 0) {
+        return;
+    }
+
+    //gets the dragged element's ID from the data transfer object (using 'draggedEl')
+    let droppedElId = event.dataTransfer.getData('draggedEl');    
+    
+    //gets the ACTUAL dragged element, using the ID
+    let droppedEl = document.querySelector(`#${droppedElId}`);
+    
+    dropZone.appendChild(droppedEl);
+}
+
 
 // event listeners
 theThumbnails.forEach(thumbnail => thumbnail.addEventListener('click', changeImageSet));
